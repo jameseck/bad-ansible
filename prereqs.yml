@@ -1,0 +1,9 @@
+---
+- name: Pre-requisites
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: Fail if GUID is not set
+    fail:
+      msg: "GUID variable is not set"
+    when:  GUID is not defined

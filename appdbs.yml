@@ -1,0 +1,7 @@
+---
+- name: deploy postgres
+  hosts: appdbs
+  gather_facts: "{{ fact_gather | default(true) }}"
+  become: true
+  roles:
+  - postgres

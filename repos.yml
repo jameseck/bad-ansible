@@ -1,0 +1,7 @@
+---
+- name: Enable repos
+  hosts: all
+  gather_facts: "{{ fact_gather | default(true) }}"
+  become: true
+  roles:
+  - repos

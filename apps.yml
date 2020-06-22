@@ -1,0 +1,9 @@
+---
+- name: deploy tomcat
+  hosts: apps
+  gather_facts: "{{ fact_gather | default(true) }}"
+  become: true
+  roles:
+  - tomcat
+  - app_content
+  - apache
